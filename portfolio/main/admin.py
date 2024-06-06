@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Tag, Project, ProjectImage
+from .models import Tag, Project, ProjectImage
 
 class ProjectImageInline(admin.TabularInline):
     model = ProjectImage
