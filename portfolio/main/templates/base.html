@@ -1,0 +1,29 @@
+{% load static %} <!-- loading your static page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio - Home{% endblock title %}</title> <!-- change title base on the subpage of file you are in -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- find specific static page to run -->
+    {% block extrahead %} <!-- add stuff specific to page -->
+    {% endblock extrahead %}
+</head>
+<body>
+    <header>
+        <ul class="nav-menu"> <!-- navigation meny bar -->
+            <li><a href="/home">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </header>
+    <main> <!-- loading content from actual page -->
+        {% block content %} 
+        {% endblock content %}
+    </main>
+
+    <!-- loading js stuff -->
+    {% block extra_js %}
+    {% endblock extra_js %}
+</body>
+</html>
