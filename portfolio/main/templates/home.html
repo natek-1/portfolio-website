@@ -11,15 +11,21 @@
 {% endblock %}
 
 {% block content %} <!-- overriding the contect block to use -->
+  <!-- begining of the porfolio page -->
+
+
+
   <div class="filters">
-    <input type="text" id="name-search" placeholder="Search by name..." />
+    <input type="text" id="name-search" placeholder="Search by project name..." />
     <div class="tags-list">
       {% for tag in tags %}
         <button class="tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button>
       {% endfor %}
     </div>
-  </div>
-  <div class="projects-list">
+  </div> <!-- searching for projects -->
+
+
+  <div class="projects-list"> <!-- displaying all the projects -->
     {% for project in projects %}
       <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
         <h2><a href="{% url 'project' project.id %}">{{project.title}}</a></h2>

@@ -12,5 +12,5 @@ def contact(request):
 
 def project(request, id):
     project = get_list_or_404(Project, pk=id)
-    return render(request, "project.html", {"project": project})
+    return render(request, "project.html", {"project": project[0]})
 

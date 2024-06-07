@@ -8,17 +8,19 @@
   <link rel="stylesheet" href="{% static 'css/project.css' %}" />
 {% endblock %}
 
-{% block content %}
+{% block content %} <!-- showing the page for each project-->
   <div class="project-card">
-    <div class="project-info">
+    <div class="project-info"> <!-- showing info for each  project -->
       <h1>{{ project.title }}</h1>
       <p>
-        <a href="{{ project.link }}">Project Link</a>
+        <a href="{{ project.link }}">Github Link</a>
       </p>
       <p>{{ project.description }}</p>
       <a href="{% url 'home' %}">Back to Home</a>
     </div>
-    <div class="carousel">
+
+
+    <div class="carousel"> <!-- showing image in each project -->
       <div class="carousel-images">
         {% for image in project.images.all %}
           <div class="carousel-item">
