@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} <!-- updating the title of the page -->
+  Contact Page
+{% endblock %}
+
+
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}" /> <!-- making sure we can use the css meant from the contact page as well as base -->
+{% endblock %}
+
+
+{% block content %}
+  <p>this is the contact page!</p>
+{% endblock %}
