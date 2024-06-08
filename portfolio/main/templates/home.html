@@ -13,6 +13,38 @@
 {% block content %} <!-- overriding the contect block to use -->
   <!-- begining of the porfolio page -->
 
+  <section class="hero container">
+    <div class="hero-blue">
+      <div>
+        <h1><small>Hi I'm</small>
+          Nathan Kuissi
+        </h1>
+        <p>
+          Data Science student at the university of Waterloo. <span>I'm interested Machine learning and using various research technique to creat solutions and solve problems.</span>
+        </p>
+        <div class="call-to-action">
+          <a href="{% static 'pdf/Resume.pdf' %}" class="button black">
+            View Resume
+          </a>
+          <a href="mailto:nategabrielk@icloud.com" class="button white">
+            Contact Me
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/natek-1">
+            <img src="{% static 'images/github.png' %}" alt="GitHub" width="48" />
+          </a>
+          <a href="https://www.linkedin.com/in/ngkuissi/">
+            <img src="{% static 'images/linkedin.png' %}" alt="LinkedIn" width="48" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-yellow">
+      <img src="{% static 'images/hero-image.jpeg' %}" alt="Nathan Kuissi" width="100%" />
+    </div>
+  </section>
+
 
 
   <div class="filters">
