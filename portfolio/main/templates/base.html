@@ -17,20 +17,20 @@
 </head>
 <body>
 	<header>
-		<a href="#" class="logo-holder">
+		<a href="{% url 'home' %}" class="logo-holder">
 			<div class="logo">NK</div>
 			<div class="logo-text"> Data Science Portfolio Website</div>
 		</a>
 		<nav>
 			<ul id="menu">
 				<li>
-					<a href="#">Home</a>
+					<a href="{% url 'home' %}">Home</a>
 				</li>
 				<li>
-					<a href="#skills">Skills</a>
+					<a href="{% url 'home' %}#skills">Skills</a>
 				</li>
 				<li>
-					<a href="#projects">Projects</a>
+					<a href="{% url 'home' %}#projects">Projects</a>
 				</li>
 				<li>
 					<a href="mailto:nategabrielk@icloud.com" class="button">Contact Me</a> <!-- depending on what you end up doing consider updating the contact page -->
