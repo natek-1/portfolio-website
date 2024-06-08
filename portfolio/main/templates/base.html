@@ -4,19 +4,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Portfolio - Home{% endblock title %}</title> <!-- change title base on the subpage of file you are in -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- change title base on the subpage of file you are in -->
+    <title>{% block title %}Portfolio - Home {% endblock title %}</title> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}"> <!-- find specific static page to run -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
     {% block extrahead %} <!-- add stuff specific to page also overides static based on the current page -->
     {% endblock extrahead %}
 </head>
 <body>
-    <header>
-        <ul class="nav-menu"> <!-- navigation meny bar -->
-            <li><a href="/home">Home</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </header>
+	<header>
+		<a href="#" class="logo-holder">
+			<div class="logo">L</div>
+			<div class="logo-text">Portfolio Website</div>
+		</a>
+		<nav>
+			<ul id="menu">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#skills">Skills</a>
+				</li>
+				<li>
+					<a href="#projects">Projects</a>
+				</li>
+				<li>
+					<a href="mailto:hello@adriantwarog.com" class="button">Contact Me</a>
+				</li>
+			</ul>
+			<a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">  <!-- depending on what you end up doing consider updating the contact page -->
+				<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+					<path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+				</svg>
+			</a>
+		</nav>
+	</header>
+
+
     <main> <!-- loading content from actual page from child template -->
         {% block content %} 
         {% endblock content %}
