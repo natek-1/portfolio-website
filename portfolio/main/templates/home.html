@@ -123,19 +123,70 @@
     </div>
   </section>
 
+  <section class="work-experience container">
+    <h2>
+      <small>Recent</small>
+      Work Experience
+    </h2>
+    <div class="jobs">
+      <article>
+        <figure>
+          <div>
+            <img src="{% static 'images/warg.png' %}" alt="WARG" width="100%" />
+            <figcaption>
+              Computer Vision Team
+            </figcaption>
+          </div>
+        </figure>
+        <h3>Waterloo Areial Robotics Group</h3>
+        <div>2020-current</div>
+        <p>Worked as a member of the path optimization sub team in the computer vision group</p>
+      </article>
+      <article>
+        <figure>
+          <div>
+            <img src="./imgs/workplace-2.jpg" alt="Workplace 2 -" width="100%" />
+            <figcaption>
+              Workplace - 2
+            </figcaption>
+          </div>
+        </figure>
+        <h3>Comapny name of job 2</h3>
+        <div>20018-2020</div>
+        <p>Description for workplace-2 </p>
+      </article>
+      <article>
+        <figure>
+          <div>
+            <img src="./imgs/workplace-3.jpg" alt="Workplace 3 - Chamber of Commerce" width="100%" />
+            <figcaption>
+              Workplace - 3
+            </figcaption>
+          </div>
+        </figure>
+        <h3>Comapny name of job 3</h3>
+        <div>2013-2018</div>
+        <p>Job Decription for Job 3.</p>
+      </article>
+      
+    </div>
+  </section>
 
 
-  <div class="filters">
+
+
+
+  <section class="filters">
     <input type="text" id="name-search" placeholder="Search by project name..." />
     <div class="tags-list">
       {% for tag in tags %}
         <button class="tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button>
       {% endfor %}
     </div>
-  </div> <!-- searching for projects -->
+  </section> <!-- searching for projects -->
 
 
-  <div id="projects" class="projects-list"> <!-- displaying all the projects -->
+  <section id="projects" class="projects-list"> <!-- displaying all the projects -->
     {% for project in projects %}
       <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
         <h2><a href="{% url 'project' project.id %}">{{project.title}}</a></h2>
@@ -143,7 +194,7 @@
         <p>Tags: {{project.tags.all|join:', '}}</p>
       </div>
     {% endfor %}
-  </div>
+    </section>
 {% endblock %}
 
 {% block extra_js %} <!-- overriding the java scrip block -->
