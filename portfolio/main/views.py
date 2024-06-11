@@ -4,7 +4,7 @@ from .models import Project, Tag
 def home(request):
     projects = Project.objects.all()
     tags = Tag.objects.all()
-    return render(request, "home.html", {"projects": projects, "tags": tags})
+    return render(request, "home.html", {"projects": projects[:5], "tags": tags})
 
 
 def contact(request):
