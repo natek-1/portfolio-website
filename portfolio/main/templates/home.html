@@ -168,12 +168,8 @@
         <div>2013-2018</div>
         <p>Job Decription for Job 3.</p>
       </article>
-      
     </div>
   </section>
-
-
-
 
 
   <section class="filters">
@@ -186,7 +182,7 @@
   </section> <!-- searching for projects -->
 
 
-  <section id="projects" class="projects-list"> <!-- displaying all the projects -->
+  <section id="projects" class="projects-list container"> <!-- displaying all the projects -->
     {% for project in projects %}
       <div class="project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
         <h2><a href="{% url 'project' project.id %}">{{project.title}}</a></h2>
